@@ -4,13 +4,17 @@ function App() {
         <Container>
             <Row>
                 <Col md={{ offset: 3, span: 6 }}>
+                    <h1>ToDo App by Seiji Shimizu</h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col md={{ offset: 3, span: 6 }}>
                     <TodoListCard />
                 </Col>
             </Row>
         </Container>
     );
 }
-
 function TodoListCard() {
     const [items, setItems] = React.useState(null);
 
@@ -153,9 +157,8 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
                     >
                         <i
                             onClick={toggleCompletion}
-                            className={`far ${
-                                item.completed ? 'fa-check-square' : 'fa-square'
-                            }`}
+                            className={`far ${item.completed ? 'fa-check-square' : 'fa-square'
+                                }`}
                         />
                     </Button>
                 </Col>
